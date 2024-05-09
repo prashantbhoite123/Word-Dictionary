@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(102, 51, 153, 1) 11.2%,
+    rgba(2, 0, 4, 1) 91.1%
+  );
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexInput {
+  display: flex;
+}
+
+#searchBtn {
+  height: 3vw;
+  width: 8vw;
+}
+.Dicti-he {
+  margin-bottom: 3vw;
+  color: yellow;
+}
+.input-container {
+  flex-direction: column;
+  background-image: radial-gradient(
+    circle 325px at 19.2% 64.8%,
+    rgba(254, 62, 101, 1) 9.7%,
+    rgba(166, 24, 146, 1) 91.3%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 40vw;
+  border: 2px solid black;
+}
+input {
+  outline: none;
+  border: none;
+  border-top-left-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  color: #000;
+  font-weight: 700;
+  font-size: 3vw;
+  padding: 1vw;
+  height: 3vw;
+  width: 20vw;
+}
+input::placeholder {
+  color: #000;
+  font-weight: 600;
+  font-size: 1.5vw;
+}
+button {
+  background-color: yellow;
+  color: #000;
+  font-size: 2vw;
+  font-weight: 600;
+  border: none;
+}
+span {
+  width: 10vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  input {
+    padding-left: 1vw;
+    font-size:4vw;
+    height: 10vw;
+    width: 50vw;
+    font-size: 7vw;
+  }
+  input::placeholder{
+    font-size: 4vw;
+  }
+
+  #searchBtn {
+    height: 10vw;
+    width: 28vw;
+    font-size: 4vw;
+  }
+  form {
+    margin-top: 20vw;
+  }
+}
