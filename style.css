@@ -22,6 +22,8 @@ body {
 }
 
 #searchBtn {
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
   height: 3vw;
   width: 8vw;
 }
@@ -76,12 +78,12 @@ span {
 @media (max-width: 800px) {
   input {
     padding-left: 1vw;
-    font-size:4vw;
+    font-size: 4vw;
     height: 10vw;
     width: 50vw;
     font-size: 7vw;
   }
-  input::placeholder{
+  input::placeholder {
     font-size: 4vw;
   }
 

@@ -7,36 +7,6 @@ const input = document.querySelector("input")
 form.addEventListener("submit", async (e) => {
   console.log(input)
   e.preventDefault()
-  const voice = new SpeechSynthesisUtterance()
-
-  if (input.value === "vishal") {
-    modalTitle.innerHTML = input.value
-    modalBody.innerHTML = `Masa chi didi❤️`
-    voice.text = input.value + modalBody.innerHTML
-    window.speechSynthesis.speak(voice)
-    return
-  }
-  if (input.value === "ganesh") {
-    modalTitle.innerHTML = input.value
-    modalBody.innerHTML = `NCC Student 🪖💪`
-    voice.text = input.value + modalBody.innerHTML
-    window.speechSynthesis.speak(voice)
-    return
-  }
-  if (input.value === "prashant") {
-    modalTitle.innerHTML = input.value
-    modalBody.innerHTML = `Parshu Babu 😊`
-    voice.text = input.value + modalBody.innerHTML
-    window.speechSynthesis.speak(voice)
-    return
-  }
-  if (input.value === "masa") {
-    modalTitle.innerHTML = input.value
-    modalBody.innerHTML = `vishal chi dada 😊`
-    voice.text = input.value + modalBody.innerHTML
-    window.speechSynthesis.speak(voice)
-    return
-  }
   try {
     const resoponce = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${input.value}`
@@ -59,8 +29,9 @@ form.addEventListener("submit", async (e) => {
     modalTitle.innerHTML = input.value
     modalBody.innerHTML = `Word Not Found`
   }
-  const speech = new SpeechSynthesisUtterance()
   document.querySelector(".fa-solid ").addEventListener("click", (e) => {
+    console.log("button was clicked")
+    const speech = new SpeechSynthesisUtterance()
     speech.text = input.value
     window.speechSynthesis.speak(speech)
   })
